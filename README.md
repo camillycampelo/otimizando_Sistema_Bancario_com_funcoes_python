@@ -1,40 +1,37 @@
-# Otimizando Sistema Bancário com Funções em Python 🏦
+# Otimizando o Sistema Bancário com Funções em Python
 
-Este projeto aprimora uma implementação básica de sistema bancário em Python, extraindo funcionalidades em **funções** para tornar o código mais organizado, modular e reutilizável.
+Este repositório apresenta uma evolução de um sistema bancário simples, originalmente desenvolvido para realizar operações de depósito, saque e consulta de extrato. Aqui, o foco é **modularizar** e **organizar** melhor o código, utilizando funções em Python para tornar o sistema mais legível, sustentável e extensível.
 
----
+## Conteúdo
 
-## 🔍 Estrutura do Repositório
+- `desafio.py` — Versão inicial após modularização.  
+- `desafio2.py` — **Nova versão atualizada** com funcionalidades adicionais (ver detalhes abaixo).  
+- `README.md` — Este arquivo de documentação.
 
-- `desafio.py` — arquivo principal com a lógica do sistema bancário (menu, depósito, saque, extrato) implementada com funções.  
-- `README.md` — este arquivo de documentação.  
+## Funcionalidades da versão `desafio.py`
 
----
+Na versão original (arquivo `desafio.py`):
 
-## 🚀 Funcionalidades do Sistema
+- Operação **Depósito**: permite ao usuário depositar um valor na conta.  
+- Operação **Saque**: permite ao usuário sacar valores, respeitando limite diário e saldo disponível.  
+- Operação **Extrato**: consulta das movimentações (depósitos e saques) e do saldo atual.  
+- Uso de funções para cada operação, visando melhor estruturação do código.
 
-- Depósito de valores positivos  
-- Saque com verificação de:
-  - Saldo disponível  
-  - Limite por operação  
-  - Quantidade máxima diária de saques  
-- Emissão de extrato com histórico das operações  
-- Loop contínuo até o usuário optar por sair  
+## Novidades da versão `desafio2.py`
 
----
+O arquivo `desafio2.py` introduz melhorias e novas funcionalidades. Algumas das principais adições incluem:
 
-## 🛠 Detalhamento das Funções
+1. **Cadastro de usuários** — Permite registrar novos clientes, armazenar dados básicos (nome, CPF, conta, etc).  
+2. **Criação de conta vinculada a usuário** — Cada usuário pode ter uma ou mais contas, e a lógica agora diferencia usuário versus conta.  
+3. **Listagem de contas** — Possibilidade de visualizar todas as contas criadas, associadas aos usuários.  
+4. **Operações adaptadas a conta/usuário** — As operações de depósito, saque e extrato agora são realizadas considerando o usuário e a conta selecionada.  
+5. **Melhorias de validação de entrada** — Verificação de dados (uso de CPF válido, conta existente, saldo suficiente, etc).  
+6. **Registro de transações por conta** — Históricos de depósitos e saques são mantidos por conta, permitindo extratos específicos.  
+7. **Limite de saques aprimorado** — A lógica de limite diário ou número de saques segue melhor estruturada (caso aplicável).  
+8. **Documentação interna** — Comentários adicionais e estrutura de menu melhorada para navegação.
 
-- `depositar(saldo, valor, extrato)`: processa depósito, valida valor e retorna saldo + histórico atualizados  
-- `sacar(saldo, valor, extrato, limite, numero_saques, limite_saques)`: gerencia as condições de saque e retorna os dados atualizados  
-- `exibir_extrato(saldo, extrato)`: imprime o histórico de movimentações e o saldo atual  
-- `menu()`: exibe o menu de opções e retorna a escolha do usuário  
-- `main()`: controla o fluxo principal do programa  
+## Como usar
 
----
-
-## 📦 Como Executar
-
-1. Clone este repositório:  
+1. Clone o repositório:  
    ```bash
    git clone https://github.com/camillycampelo/otimizando_Sistema_Bancario_com_funcoes_python.git
